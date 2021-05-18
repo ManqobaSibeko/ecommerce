@@ -1,4 +1,4 @@
-*::before,
+/*/* *::before,
 *::after,
 *
 {
@@ -9,8 +9,11 @@
     list-style: none;
     font-family: 'Roboto Condensed', sans-serif;
 }
+html{
+    margin: 0;
+}
 
-/*-------------------------------- row layout----------------------------*/
+-------------------------------- row layout----------------------------
 
 .row {
     display: flex;
@@ -19,9 +22,9 @@
     justify-content: space-around;
 }
 
-/*-------------------------------- header layout----------------------------*/
+-------------------------------- header layout----------------------------
 .mainheader{
-    background: radial-gradient(#FFF,#ffd6d6);
+    /* background: radial-gradient(#FFF,#ffd6d6); 
     max-width: 100%;
 }
 
@@ -32,7 +35,7 @@ header{
 }
 
 
-/*--------------------------------  nav bar layout----------------------------*/
+--------------------------------  nav bar layout----------------------------
 
 .navbar{
     display: flex;
@@ -98,13 +101,13 @@ header .col img{
 }
 
 
-/*-------------------------------- featured categories layout ----------------------------*/
+-------------------------------- featured categories layout ----------------------------
 
 .small-container{
-    max-width: 1080px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 1.5em;
-    /* background: #555; */
+     background: #555; 
 }
 
 .categories{
@@ -124,7 +127,7 @@ header .col img{
 }
 
 
-/*-------------------------------- product layout ----------------------------*/
+-------------------------------- product layout ----------------------------
 
 .title{
     text-align: center;
@@ -149,12 +152,12 @@ header .col img{
 
 }
 .products .col{
-    flex-basis:25% ;
+    flex-basis:20% ;
     padding: .5em;
-    min-width: 200px;
-    margin-bottom: 3em;
-    margin-top: 3em;
+    width: 100px;
+    margin:3em 8px;
     transition: all .5s;
+     border: #555 solid 2px; 
 }
 
 .products img{
@@ -162,12 +165,12 @@ header .col img{
 }
 
 .products  .col:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
-/* .products:last-child{
+ .products:last-child{
     margin-top: 8px;
-} */
+} 
 
 .offer .col{
     flex-basis:50% ;
@@ -230,14 +233,434 @@ header .col img{
 
 
 
-/*-------------------------------- media Query ----------------------------*/
+-------------------------------- media Query ----------------------------
 @media (max-width:700px) {
+
+    nav ul{
+        display:none;
+    }
+    header .row{
+        display: block;
+    }
+    header .col{
+        flex-basis:0%;
+        min-width: 300px;
+    }
    
-row{
+.row{
+        display: block;
+        margin: auto;
+     text-align: center; 
+    }
+
+    .products .row{
+     display: block;
+
+    }
+
+    .products .col{
+        width: 80%;
+        text-align: center;
+    }
+    
+    .products img{
+        width: 100%;
+    }
+-------------------------------- product layout ----------------------------
+
+
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0;
+}
+section,.categories{
+    width: 80%;
+    margin: 2em auto;
+
+}
+
+header,.categories .row,.offer ,.testimonials .row {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.mainheader{
+    background: radial-gradient(#FFF,#ffd6d6);
+    margin:auto;
+    width: 100%;
+}
+
+header{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 1.5em;
+}
+
+.navbar{
+    display: block;
+    /* margin: 1.3em 0; */
+}
+.navbar .logo{
+    /* margin: 1.3em 0; */
+   text-align: center;
+}
+
+label{
+    display: none;
+}
+
+nav ul{
+    display: none;
+}
+
+.row{
+    display: block;
+    margin: auto;
+/* text-align: center; */
+}
+
+header .col{
+    flex-basis: 50%;
+    /* min-width: 300px; */
+    margin: auto;
+    text-align: center;
+}
+
+header .col h1{
+    font-size:2em ;
+    text-transform: capitalize;
+    /* line-height: 40px; */
+    text-align: center;
+}
+header .col p{
+    font-size: 1.2em;
+    text-transform: capitalize;
+    line-height: 20px;
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: .5em 2em;
+    margin: 30px 0;
+    transition: all .5s;
+    text-align: center;
+
+}
+
+header .col img{
+    max-width: 100%;
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    position: relative;
+}
+
+/* .small-container{
+
+} */
+
+.categories{
+    margin:auto
+
+}
+.categories .row{
+    text-align: center;
+}
+
+.row{
     display: block;
 }
 
-/*-------------------------------- product layout ----------------------------*/
 
+.categories .col{ 
+margin: 2em 0;
+}
+
+.categories img{
+    width: 100%;
+}
+
+.products .row{
+ display: block;
+
+}
+
+.products .col{
+    width: 80%;
+    margin: auto;
+}
+
+.products img{
+    width: 100%;
+}
+
+.s{
+    font-size: 2em;
+    color: #ff523b;
+}
+
+
+    
+.offer .col{
+    flex-basis:50% ;
+    padding: .5em;
+    min-width: 200px;
+    margin:2em 0;
+    transition: all .5s;
+}
+.offer img {
+    width: 100%;
+}
+
+
+.offer p {
+    font-size: 2em;
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+
+.offer h1 {
+    font-size: 4em;
+    text-transform: capitalize;
+    margin: 1em 0 .4em 0;
+    text-align: center;
+    
+}
+.offer small {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+/* @media (min-width:600px){
+    .products .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .products .col{
+        flex: 50%;
+    }
+
+} */
+
+
+
+
+/*============================== ubufakazi ===================================*/
+.testimonials .col{
+
+    padding: 40px 20px;
+    box-shadow: 0px 0px 20px 0 rgba(0,0,0,0.2);
+    margin: 1em 1.5em 3em 0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.testimonials .col:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 2px 0 rgba(0,0,0,0.2);
+}
+
+/* .testimonials .img{
+    border-radius: 50%;
+} */
+
+.testimonials img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+/*============================== media query ===================================*/
+@media (min-width:500px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    html{
+        margin: 0;
+    }
+
+    header,.categories .row,.offer  {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+
+    label h1 ,input{
+        display: none;
+    }
+    
+    .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5em 0 9em 0;
+    } 
+
+    .small-container{
+
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding: 1.5em;
+    }
+    
+    nav{
+        flex: 1;
+        text-align: right;
+    }
+    
+    nav ul{
+        display: inline-block;
+    }
+    
+    nav ul li{
+        display: inline-block;
+        margin-right: 2em;
+    }
+
+
+    header .col{
+        flex-basis: 50%;
+        min-width: 300px;
+        margin: auto;
+    }
+
+    header .col h1{
+        font-size:3em ;
+        text-transform: capitalize;
+        line-height: 60px;
+    }
+    /* header .col p{
+    
+    } */
+     
+    .btn{
+        display: inline-block;
+        background: #ff523b;
+        color: #fff;
+        padding: .5em 2em;
+        margin: 30px 0;
+        transition: all .5s;
+    
+    }
+    .btn:hover{
+        background: #563434;
+    }
+    
+    header .col img{
+        max-width: 100%;
+        padding: 3em;
+    }
+    
+    .products .row{
+        display: flex;   
+
+    }
+
+    .products .col{
+        flex: 20%;
+        transition: all .5s;
+        /* border: #555 solid 2px; */
+    }
+
+    .s{
+        font-size: 1.2em;
+    } 
+
+    .img{
+        margin: auto;
+        width: 200px;
+        height: 360px; 
+
+    }
+
+    .products img{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .products  .col:hover{
+        transform: scale(1.2);
+    }
+
+    
+    .offer .col{
+    flex-basis:50% ;
+    padding: .5em;
+    min-width: 200px;
+    margin-bottom: 3em;
+    margin-top: 3em;
+    transition: all .5s;
+    }
+
+    .offer img {
+    width: 100%;
+    }
+
+
+.offer p {
+    font-size: 2em;
+    text-transform: capitalize;
+    
+}
+
+.offer h1 {
+    font-size: 4em;
+    text-transform: capitalize;
+    margin: 1.2em 0 .4em 0;
+    
+}
+.offer small {
+    font-size: 1.4em;
+}
+
+.testimonials .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonials .col{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0px 0px 20px 0 rgba(0,0,0,0.2);
+    margin: 1em 1.5em 3em 0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.testimonials .col:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 2px 0 rgba(0,0,0,0.2);
+}
+
+/* .testimonials .img{
+    border-radius: 50%;
+} */
+
+.testimonials img{
+    width: 100px;
+    border-radius: 50%;
+}
 
 }
